@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0J6P3W2F2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M0J6P3W2F2');
-</script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,9 +8,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PVVPQCVX');</script>
 <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0LPR83HCQS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0LPR83HCQS');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navy Shop</title>
+    <title>Brown Theme Shop</title>
     <style>
         * {
             margin: 0;
@@ -28,129 +28,141 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
             min-height: 100vh;
-            color: #fff;
+            padding: 20px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            background: #FFF8DC;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         header {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px;
+            text-align: center;
             margin-bottom: 30px;
-            border-radius: 10px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #8B4513;
         }
 
         h1 {
+            color: #5C3317;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
 
         nav {
-            margin-top: 15px;
+            margin: 20px 0;
         }
 
         nav a {
-            color: #fff;
+            color: #5C3317;
             text-decoration: none;
-            margin-right: 20px;
+            margin: 0 15px;
+            font-weight: bold;
             padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
-            transition: all 0.3s;
+            background: #D2B48C;
+            transition: background 0.3s;
         }
 
         nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: #8B4513;
+            color: #FFF8DC;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
 
         .product-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
             cursor: pointer;
+            border: 2px solid #D2B48C;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
 
         .product-image {
             width: 100%;
             height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
+            background: #D2B48C;
+            border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4em;
+            font-size: 3em;
             margin-bottom: 15px;
         }
 
         .product-title {
-            font-size: 1.5em;
+            color: #5C3317;
+            font-size: 1.3em;
             margin-bottom: 10px;
         }
 
         .product-price {
-            font-size: 1.3em;
-            color: #81c784;
+            color: #8B4513;
+            font-size: 1.5em;
             font-weight: bold;
+            margin: 10px 0;
         }
 
-        .product-detail {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .product-detail .product-image {
-            height: 300px;
-            font-size: 6em;
-            margin-bottom: 30px;
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
         }
 
         .btn {
-            background: #4caf50;
+            background: #8B4513;
             color: white;
-            padding: 12px 30px;
             border: none;
+            padding: 12px 24px;
             border-radius: 5px;
-            font-size: 1.1em;
             cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            width: 100%;
             transition: background 0.3s;
         }
 
         .btn:hover {
-            background: #45a049;
+            background: #5C3317;
         }
 
-        .form-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            max-width: 600px;
-            margin: 0 auto;
+        .product-detail {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #D2B48C;
+        }
+
+        .product-detail .product-image {
+            height: 300px;
+            font-size: 5em;
         }
 
         .form-group {
@@ -159,47 +171,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         label {
             display: block;
+            color: #5C3317;
+            font-weight: bold;
             margin-bottom: 8px;
-            font-weight: 500;
         }
 
-        input, select, textarea {
+        input, textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid #D2B48C;
             border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
             font-size: 1em;
+            background: white;
         }
 
-        input::placeholder, textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #8B4513;
         }
 
         .thank-you {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 60px 40px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            max-width: 600px;
-            margin: 0 auto;
+            padding: 50px 20px;
         }
 
         .thank-you h2 {
-            font-size: 3em;
+            color: #5C3317;
+            font-size: 2.5em;
             margin-bottom: 20px;
-            color: #81c784;
         }
 
         .thank-you p {
-            font-size: 1.3em;
+            color: #666;
+            font-size: 1.2em;
             margin-bottom: 30px;
         }
 
-        .hidden {
-            display: none;
+        .checkmark {
+            font-size: 5em;
+            color: #8B4513;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -210,167 +221,177 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="container">
         <header>
-            <h1>🛍️ Navy Shop</h1>
-            <nav>
-                <a href="#/" onclick="navigate('/')">Home</a>
-                <a href="#/checkout" onclick="navigate('/checkout')">Checkout</a>
+            <h1>🛍️ Brown Theme Shop</h1>
+            <nav id="nav">
+                <a href="#home" onclick="navigate('home')">Home</a>
+                <a href="#checkout" onclick="navigate('checkout')">Checkout</a>
             </nav>
         </header>
 
-        <div id="app"></div>
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <h2 style="color: #5C3317; margin-bottom: 20px;">Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="navigate('product-1')">
+                    <div class="product-image">☕</div>
+                    <div class="product-title">Classic Coffee Mug</div>
+                    <div class="product-price">$12.99</div>
+                    <div class="product-description">Perfect for your morning coffee</div>
+                    <button class="btn">View Details</button>
+                </div>
+
+                <div class="product-card" onclick="navigate('product-2')">
+                    <div class="product-image">🎒</div>
+                    <div class="product-title">Leather Backpack</div>
+                    <div class="product-price">$89.99</div>
+                    <div class="product-description">Durable and stylish backpack</div>
+                    <button class="btn">View Details</button>
+                </div>
+
+                <div class="product-card" onclick="navigate('product-3')">
+                    <div class="product-image">👟</div>
+                    <div class="product-title">Brown Sneakers</div>
+                    <div class="product-price">$65.99</div>
+                    <div class="product-description">Comfortable everyday sneakers</div>
+                    <button class="btn">View Details</button>
+                </div>
+
+                <div class="product-card" onclick="navigate('product-4')">
+                    <div class="product-image">📚</div>
+                    <div class="product-title">Notebook Set</div>
+                    <div class="product-price">$24.99</div>
+                    <div class="product-description">Premium quality notebooks</div>
+                    <button class="btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Detail Pages -->
+        <div id="product-1" class="page">
+            <div class="product-detail">
+                <div class="product-image">☕</div>
+                <h2 class="product-title">Classic Coffee Mug</h2>
+                <div class="product-price">$12.99</div>
+                <p class="product-description">This classic coffee mug is perfect for your morning routine. Made with high-quality ceramic, it keeps your coffee warm and looks great on any desk.</p>
+                <button class="btn" onclick="navigate('checkout')">Buy Now</button>
+                <button class="btn" style="background: #D2B48C; color: #5C3317; margin-top: 10px;" onclick="navigate('home')">Back to Products</button>
+            </div>
+        </div>
+
+        <div id="product-2" class="page">
+            <div class="product-detail">
+                <div class="product-image">🎒</div>
+                <h2 class="product-title">Leather Backpack</h2>
+                <div class="product-price">$89.99</div>
+                <p class="product-description">A premium leather backpack with multiple compartments. Perfect for work, school, or travel. Built to last with genuine leather and brass hardware.</p>
+                <button class="btn" onclick="navigate('checkout')">Buy Now</button>
+                <button class="btn" style="background: #D2B48C; color: #5C3317; margin-top: 10px;" onclick="navigate('home')">Back to Products</button>
+            </div>
+        </div>
+
+        <div id="product-3" class="page">
+            <div class="product-detail">
+                <div class="product-image">👟</div>
+                <h2 class="product-title">Brown Sneakers</h2>
+                <div class="product-price">$65.99</div>
+                <p class="product-description">Comfortable brown sneakers perfect for everyday wear. Features cushioned insoles and breathable material for all-day comfort.</p>
+                <button class="btn" onclick="navigate('checkout')">Buy Now</button>
+                <button class="btn" style="background: #D2B48C; color: #5C3317; margin-top: 10px;" onclick="navigate('home')">Back to Products</button>
+            </div>
+        </div>
+
+        <div id="product-4" class="page">
+            <div class="product-detail">
+                <div class="product-image">📚</div>
+                <h2 class="product-title">Notebook Set</h2>
+                <div class="product-price">$24.99</div>
+                <p class="product-description">Premium notebook set with 3 different sizes. Perfect for notes, sketches, or journaling. Features thick, high-quality paper.</p>
+                <button class="btn" onclick="navigate('checkout')">Buy Now</button>
+                <button class="btn" style="background: #D2B48C; color: #5C3317; margin-top: 10px;" onclick="navigate('home')">Back to Products</button>
+            </div>
+        </div>
+
+        <!-- Checkout Page -->
+        <div id="checkout" class="page">
+            <h2 style="color: #5C3317; margin-bottom: 20px;">Checkout</h2>
+            <form id="checkoutForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="card">Card Number</label>
+                    <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456" required>
+                </div>
+
+                <button type="submit" class="btn">Complete Purchase</button>
+            </form>
+        </div>
+
+        <!-- Thank You Page -->
+        <div id="thankyou" class="page">
+            <div class="thank-you">
+                <div class="checkmark">✓</div>
+                <h2>Thank You for Your Purchase!</h2>
+                <p>Your order has been confirmed and will be shipped soon.</p>
+                <p>You will receive a confirmation email shortly.</p>
+                <button class="btn" style="max-width: 300px; margin: 0 auto;" onclick="navigate('home')">Continue Shopping</button>
+            </div>
+        </div>
     </div>
 
     <script>
-        const products = [
-            { id: 1, name: 'Laptop', price: 999, emoji: '💻', description: 'High-performance laptop with stunning display' },
-            { id: 2, name: 'Smartphone', price: 699, emoji: '📱', description: 'Latest smartphone with advanced features' },
-            { id: 3, name: 'Headphones', price: 199, emoji: '🎧', description: 'Premium wireless headphones with noise cancellation' },
-            { id: 4, name: 'Camera', price: 1299, emoji: '📷', description: 'Professional camera for stunning photography' },
-            { id: 5, name: 'Watch', price: 399, emoji: '⌚', description: 'Smart watch with health tracking features' },
-            { id: 6, name: 'Tablet', price: 599, emoji: '📲', description: 'Versatile tablet for work and entertainment' }
-        ];
+        function navigate(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
 
-        let cart = [];
-
-        function navigate(path) {
-            window.location.hash = path;
-            router();
-        }
-
-        function router() {
-            const path = window.location.hash.slice(1) || '/';
-            const app = document.getElementById('app');
-
-            if (path === '/') {
-                app.innerHTML = renderHome();
-            } else if (path === '/checkout') {
-                app.innerHTML = renderCheckout();
-                setupCheckoutForm();
-            } else if (path === '/thank-you') {
-                app.innerHTML = renderThankYou();
-            } else if (path.startsWith('/product/')) {
-                const productId = parseInt(path.split('/')[2]);
-                app.innerHTML = renderProduct(productId);
-                setupProductPage(productId);
+            // Show selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+                
+                // Update URL hash
+                window.location.hash = pageId;
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
             }
         }
 
-        function renderHome() {
-            return `
-                <h2 style="font-size: 2em; margin-bottom: 20px;">Featured Products</h2>
-                <div class="products-grid">
-                    ${products.map(product => `
-                        <div class="product-card" onclick="navigate('/product/${product.id}')">
-                            <div class="product-image">${product.emoji}</div>
-                            <div class="product-title">${product.name}</div>
-                            <div class="product-price">$${product.price}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
+        function handleSubmit(event) {
+            event.preventDefault();
+            navigate('thankyou');
+            document.getElementById('checkoutForm').reset();
         }
 
-        function renderProduct(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return '<h2>Product not found</h2>';
+        // Handle browser back/forward buttons
+        window.addEventListener('hashchange', function() {
+            const hash = window.location.hash.substring(1) || 'home';
+            navigate(hash);
+        });
 
-            return `
-                <div class="product-detail">
-                    <div class="product-image">${product.emoji}</div>
-                    <h2 style="font-size: 2.5em; margin-bottom: 15px;">${product.name}</h2>
-                    <p style="font-size: 1.2em; margin-bottom: 20px; color: rgba(255,255,255,0.8);">${product.description}</p>
-                    <div class="product-price" style="font-size: 2em; margin-bottom: 30px;">$${product.price}</div>
-                    <button class="btn" id="addToCart">Add to Cart</button>
-                    <button class="btn" style="background: #2196F3; margin-left: 10px;" onclick="navigate('/')">Back to Shop</button>
-                </div>
-            `;
-        }
-
-        function setupProductPage(productId) {
-            const btn = document.getElementById('addToCart');
-            if (btn) {
-                btn.addEventListener('click', () => {
-                    const product = products.find(p => p.id === productId);
-                    cart.push(product);
-                    alert(`${product.name} added to cart!`);
-                    navigate('/checkout');
-                });
-            }
-        }
-
-        function renderCheckout() {
-            const total = cart.reduce((sum, item) => sum + item.price, 0);
-            return `
-                <div class="form-container">
-                    <h2 style="font-size: 2em; margin-bottom: 30px;">Checkout</h2>
-                    ${cart.length > 0 ? `
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 5px; margin-bottom: 30px;">
-                            <h3 style="margin-bottom: 15px;">Cart Items:</h3>
-                            ${cart.map(item => `
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span>${item.emoji} ${item.name}</span>
-                                    <span>$${item.price}</span>
-                                </div>
-                            `).join('')}
-                            <hr style="margin: 15px 0; border-color: rgba(255,255,255,0.3);">
-                            <div style="display: flex; justify-content: space-between; font-size: 1.3em; font-weight: bold;">
-                                <span>Total:</span>
-                                <span style="color: #81c784;">$${total}</span>
-                            </div>
-                        </div>
-                    ` : '<p style="margin-bottom: 20px;">Your cart is empty. <a href="#/" onclick="navigate(\'/\')" style="color: #81c784;">Continue shopping</a></p>'}
-                    
-                    <form id="checkoutForm">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" name="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" name="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea name="address" rows="3" placeholder="123 Main St, City, State" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Payment Method</label>
-                            <select name="payment" required>
-                                <option value="">Select payment method</option>
-                                <option value="credit">Credit Card</option>
-                                <option value="debit">Debit Card</option>
-                                <option value="paypal">PayPal</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Place Order</button>
-                    </form>
-                </div>
-            `;
-        }
-
-        function setupCheckoutForm() {
-            const form = document.getElementById('checkoutForm');
-            if (form) {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    navigate('checkout');
-                });
-            }
-        }
-
-        function renderThankYou() {
-            return `
-                <div class="thank-you">
-                    <h2>✓ Thank You!</h2>
-                    <p>Your order has been placed successfully.</p>
-                    <p style="font-size: 1.1em; color: rgba(255,255,255,0.8);">We'll send you a confirmation email shortly.</p>
-                    <button class="btn" onclick="navigate('/')">Continue Shopping</button>
-                </div>
-            `;
-        }
-
-        window.addEventListener('hashchange', router);
-        window.addEventListener('load', router);
+        // Load initial page based on URL hash
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1) || 'home';
+            navigate(hash);
+        });
     </script>
 </body>
 </html>
