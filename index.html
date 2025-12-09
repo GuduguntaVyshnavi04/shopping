@@ -1,748 +1,946 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5NW5BZZ7');</script>
-<!-- End Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5NW5BZZ7");
+    </script>
+    <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0J6P3W2F2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M0J6P3W2F2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-M0J6P3W2F2');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      gtag("config", "G-M0J6P3W2F2");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brown Theme Shop</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #FFF8DC;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #fff8dc;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
 
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #8B4513;
-        }
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #8b4513;
+      }
 
-        h1 {
-            color: #5C3317;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+      h1 {
+        color: #5c3317;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
 
-        nav {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+      nav {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
 
-        nav a {
-            color: #5C3317;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 16px;
-            border-radius: 5px;
-            background: #D2B48C;
-            transition: background 0.3s;
-            position: relative;
-        }
+      nav a {
+        color: #5c3317;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 16px;
+        border-radius: 5px;
+        background: #d2b48c;
+        transition: background 0.3s;
+        position: relative;
+      }
 
-        nav a:hover {
-            background: #8B4513;
-            color: #FFF8DC;
-        }
+      nav a:hover {
+        background: #8b4513;
+        color: #fff8dc;
+      }
 
-        .skincare-btn {
-            background: #FF69B4 !important;
-            color: white !important;
-        }
+      .skincare-btn {
+        background: #ff69b4 !important;
+        color: white !important;
+      }
 
-        .skincare-btn:hover {
-            background: #FF1493 !important;
-            color: white !important;
-        }
+      .skincare-btn:hover {
+        background: #ff1493 !important;
+        color: white !important;
+      }
 
-        .cart-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #d32f2f;
-            color: white;
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75em;
-            font-weight: bold;
-        }
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #d32f2f;
+        color: white;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75em;
+        font-weight: bold;
+      }
 
-        .page {
-            display: none;
-        }
+      .page {
+        display: none;
+      }
 
-        .page.active {
-            display: block;
-        }
+      .page.active {
+        display: block;
+      }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+      }
 
-        .product-card {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            border: 2px solid #D2B48C;
-        }
+      .product-card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        border: 2px solid #d2b48c;
+      }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
 
-        .product-image {
-            width: 100%;
-            height: 200px;
-            background: #D2B48C;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
+      .product-image {
+        width: 100%;
+        height: 200px;
+        background: #d2b48c;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3em;
+        margin-bottom: 15px;
+      }
 
-        .product-title {
-            color: #5C3317;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
+      .product-title {
+        color: #5c3317;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
 
-        .product-price {
-            color: #8B4513;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+      .product-price {
+        color: #8b4513;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 10px 0;
+      }
 
-        .product-description {
-            color: #666;
-            margin-bottom: 15px;
-        }
+      .product-description {
+        color: #666;
+        margin-bottom: 15px;
+      }
 
-        .btn {
-            background: #8B4513;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            width: 100%;
-            transition: background 0.3s;
-        }
+      .btn {
+        background: #8b4513;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        width: 100%;
+        transition: background 0.3s;
+      }
 
-        .btn:hover {
-            background: #5C3317;
-        }
+      .btn:hover {
+        background: #5c3317;
+      }
 
-        .btn-secondary {
-            background: #D2B48C;
-            color: #5C3317;
-            margin-top: 10px;
-        }
+      .btn-secondary {
+        background: #d2b48c;
+        color: #5c3317;
+        margin-top: 10px;
+      }
 
-        .btn-secondary:hover {
-            background: #C19A6B;
-        }
+      .btn-secondary:hover {
+        background: #c19a6b;
+      }
 
-        .product-detail {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            border: 2px solid #D2B48C;
-        }
+      .product-detail {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        border: 2px solid #d2b48c;
+      }
 
-        .product-detail .product-image {
-            height: 300px;
-            font-size: 5em;
-        }
+      .product-detail .product-image {
+        height: 300px;
+        font-size: 5em;
+      }
 
-        .cart-container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            border: 2px solid #D2B48C;
-        }
+      .cart-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        border: 2px solid #d2b48c;
+      }
 
-        .cart-empty {
-            text-align: center;
-            padding: 60px 20px;
-            color: #666;
-        }
+      .cart-empty {
+        text-align: center;
+        padding: 60px 20px;
+        color: #666;
+      }
 
-        .cart-empty-icon {
-            font-size: 5em;
-            margin-bottom: 20px;
-        }
+      .cart-empty-icon {
+        font-size: 5em;
+        margin-bottom: 20px;
+      }
 
+      .cart-item {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        border-bottom: 2px solid #d2b48c;
+        align-items: center;
+      }
+
+      .cart-item:last-child {
+        border-bottom: none;
+      }
+
+      .cart-item-image {
+        width: 100px;
+        height: 100px;
+        background: #d2b48c;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5em;
+        flex-shrink: 0;
+      }
+
+      .cart-item-details {
+        flex-grow: 1;
+      }
+
+      .cart-item-title {
+        color: #5c3317;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .cart-item-price {
+        color: #8b4513;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      .cart-item-actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff8dc;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid #d2b48c;
+      }
+
+      .quantity-btn {
+        background: #8b4513;
+        color: white;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      .quantity-btn:hover {
+        background: #5c3317;
+      }
+
+      .quantity-display {
+        color: #5c3317;
+        font-weight: bold;
+        min-width: 30px;
+        text-align: center;
+      }
+
+      .remove-btn {
+        background: #d32f2f;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .remove-btn:hover {
+        background: #b71c1c;
+      }
+
+      .cart-summary {
+        background: #fff8dc;
+        padding: 25px;
+        border-radius: 8px;
+        margin-top: 30px;
+        border: 2px solid #d2b48c;
+      }
+
+      .cart-summary h3 {
+        color: #5c3317;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        color: #5c3317;
+        font-size: 1.1em;
+      }
+
+      .summary-row.total {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-top: 15px;
+        border-top: 2px solid #d2b48c;
+        color: #8b4513;
+      }
+
+      .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        border: 2px solid #d2b48c;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        color: #5c3317;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #d2b48c;
+        border-radius: 5px;
+        font-size: 1em;
+        font-family: Arial, sans-serif;
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: #8b4513;
+      }
+
+      .thank-you-content {
+        background: white;
+        padding: 50px;
+        border-radius: 8px;
+        border: 2px solid #d2b48c;
+        text-align: center;
+      }
+
+      .thank-you-content h2 {
+        color: #5c3317;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      .thank-you-content p {
+        color: #666;
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+
+      .checkmark {
+        width: 100px;
+        height: 100px;
+        background: #8b4513;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4em;
+        color: white;
+        margin: 0 auto 30px;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
         .cart-item {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            border-bottom: 2px solid #D2B48C;
-            align-items: center;
-        }
-
-        .cart-item:last-child {
-            border-bottom: none;
-        }
-
-        .cart-item-image {
-            width: 100px;
-            height: 100px;
-            background: #D2B48C;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5em;
-            flex-shrink: 0;
-        }
-
-        .cart-item-details {
-            flex-grow: 1;
-        }
-
-        .cart-item-title {
-            color: #5C3317;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .cart-item-price {
-            color: #8B4513;
-            font-size: 1.2em;
-            font-weight: bold;
+          flex-direction: column;
+          text-align: center;
         }
 
         .cart-item-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+          flex-direction: column;
+          width: 100%;
         }
 
         .quantity-control {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #FFF8DC;
-            padding: 5px 10px;
-            border-radius: 5px;
-            border: 2px solid #D2B48C;
+          width: 100%;
+          justify-content: center;
         }
-
-        .quantity-btn {
-            background: #8B4513;
-            color: white;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .quantity-btn:hover {
-            background: #5C3317;
-        }
-
-        .quantity-display {
-            color: #5C3317;
-            font-weight: bold;
-            min-width: 30px;
-            text-align: center;
-        }
-
-        .remove-btn {
-            background: #d32f2f;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .remove-btn:hover {
-            background: #b71c1c;
-        }
-
-        .cart-summary {
-            background: #FFF8DC;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border: 2px solid #D2B48C;
-        }
-
-        .cart-summary h3 {
-            color: #5C3317;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-
-        .summary-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            color: #5C3317;
-            font-size: 1.1em;
-        }
-
-        .summary-row.total {
-            font-size: 1.5em;
-            font-weight: bold;
-            padding-top: 15px;
-            border-top: 2px solid #D2B48C;
-            color: #8B4513;
-        }
-
-        .form-container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            border: 2px solid #D2B48C;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #5C3317;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #D2B48C;
-            border-radius: 5px;
-            font-size: 1em;
-            font-family: Arial, sans-serif;
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #8B4513;
-        }
-
-        .thank-you-content {
-            background: white;
-            padding: 50px;
-            border-radius: 8px;
-            border: 2px solid #D2B48C;
-            text-align: center;
-        }
-
-        .thank-you-content h2 {
-            color: #5C3317;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .thank-you-content p {
-            color: #666;
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        .checkmark {
-            width: 100px;
-            height: 100px;
-            background: #8B4513;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-            color: white;
-            margin: 0 auto 30px;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes slideOut {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-
-        @media (max-width: 768px) {
-            .cart-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .cart-item-actions {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .quantity-control {
-                width: 100%;
-                justify-content: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NW5BZZ7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5NW5BZZ7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-        <header>
-            <h1>🛍️ Brown Theme Shop</h1>
-            <nav id="nav">
-                <a href="#home" onclick="navigate('home')">Home</a>
-                <a href="https://vyshnavi990.github.io/shoppinghubb/" target="_blank" class="skincare-btn">Skincare</a>
-                <a href="#cart" onclick="navigate('cart')" style="position: relative;">
-                    Cart 🛒
-                    <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
-                </a>
-                <a href="#contact" onclick="navigate('contact')">Contact</a>
-                <a href="#submit" onclick="navigate('submit')">Submit Form</a>
-            </nav>
-        </header>
+      <header>
+        <h1>🛍️ Brown Theme Shop</h1>
+        <nav id="nav">
+          <a href="#home" onclick="navigate('home')">Home</a>
+          <a
+            href="https://vyshnavi990.github.io/shoppinghubb/"
+            target="_blank"
+            class="skincare-btn"
+            >Skincare</a
+          >
+          <a href="#cart" onclick="navigate('cart')" style="position: relative">
+            Cart 🛒
+            <span class="cart-badge" id="cartBadge" style="display: none"
+              >0</span
+            >
+          </a>
+          <a href="#contact" onclick="navigate('contact')">Contact</a>
+          <a href="#submit" onclick="navigate('submit')">Submit Form</a>
+          <a href="#simpleform" onclick="navigate('simpleform')"
+            >Quick Contact</a
+          >
+        </nav>
+      </header>
 
-        <!-- Home Page -->
-        <div id="home" class="page active">
-            <h2 style="color: #5C3317; margin-bottom: 20px;">Our Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">☕</div>
-                    <div class="product-title">Classic Coffee Mug</div>
-                    <div class="product-price">$12.99</div>
-                    <div class="product-description">Perfect for your morning coffee</div>
-                    <button class="btn" onclick="navigate('product-1')">View Details</button>
-                    <button class="btn btn-secondary" onclick="addToCart(1)">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">🎒</div>
-                    <div class="product-title">Leather Backpack</div>
-                    <div class="product-price">$89.99</div>
-                    <div class="product-description">Durable and stylish backpack</div>
-                    <button class="btn" onclick="navigate('product-2')">View Details</button>
-                    <button class="btn btn-secondary" onclick="addToCart(2)">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">👟</div>
-                    <div class="product-title">Brown Sneakers</div>
-                    <div class="product-price">$65.99</div>
-                    <div class="product-description">Comfortable everyday sneakers</div>
-                    <button class="btn" onclick="navigate('product-3')">View Details</button>
-                    <button class="btn btn-secondary" onclick="addToCart(3)">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">📚</div>
-                    <div class="product-title">Notebook Set</div>
-                    <div class="product-price">$24.99</div>
-                    <div class="product-description">Premium quality notebooks</div>
-                    <button class="btn" onclick="navigate('product-4')">View Details</button>
-                    <button class="btn btn-secondary" onclick="addToCart(4)">Add to Cart</button>
-                </div>
+      <!-- Home Page -->
+      <div id="home" class="page active">
+        <h2 style="color: #5c3317; margin-bottom: 20px">Our Products</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">☕</div>
+            <div class="product-title">Classic Coffee Mug</div>
+            <div class="product-price">$12.99</div>
+            <div class="product-description">
+              Perfect for your morning coffee
             </div>
-        </div>
+            <button class="btn" onclick="navigate('product-1')">
+              View Details
+            </button>
+            <button class="btn btn-secondary" onclick="addToCart(1)">
+              Add to Cart
+            </button>
+          </div>
 
-        <!-- Product Detail Pages -->
-        <div id="product-1" class="page">
-            <div class="product-detail">
-                <div class="product-image">☕</div>
-                <h2 class="product-title">Classic Coffee Mug</h2>
-                <div class="product-price">$12.99</div>
-                <p class="product-description">This classic coffee mug is perfect for your morning routine. Made with high-quality ceramic, it keeps your coffee warm and looks great on any desk.</p>
-                <button class="btn" onclick="addToCart(1)">Add to Cart</button>
-                <button class="btn btn-secondary" onclick="navigate('home')">Back to Products</button>
-            </div>
-        </div>
+          <div class="product-card">
+            <div class="product-image">🎒</div>
+            <div class="product-title">Leather Backpack</div>
+            <div class="product-price">$89.99</div>
+            <div class="product-description">Durable and stylish backpack</div>
+            <button class="btn" onclick="navigate('product-2')">
+              View Details
+            </button>
+            <button class="btn btn-secondary" onclick="addToCart(2)">
+              Add to Cart
+            </button>
+          </div>
 
-        <div id="product-2" class="page">
-            <div class="product-detail">
-                <div class="product-image">🎒</div>
-                <h2 class="product-title">Leather Backpack</h2>
-                <div class="product-price">$89.99</div>
-                <p class="product-description">A premium leather backpack with multiple compartments. Perfect for work, school, or travel. Built to last with genuine leather and brass hardware.</p>
-                <button class="btn" onclick="addToCart(2)">Add to Cart</button>
-                <button class="btn btn-secondary" onclick="navigate('home')">Back to Products</button>
-            </div>
-        </div>
+          <div class="product-card">
+            <div class="product-image">👟</div>
+            <div class="product-title">Brown Sneakers</div>
+            <div class="product-price">$65.99</div>
+            <div class="product-description">Comfortable everyday sneakers</div>
+            <button class="btn" onclick="navigate('product-3')">
+              View Details
+            </button>
+            <button class="btn btn-secondary" onclick="addToCart(3)">
+              Add to Cart
+            </button>
+          </div>
 
-        <div id="product-3" class="page">
-            <div class="product-detail">
-                <div class="product-image">👟</div>
-                <h2 class="product-title">Brown Sneakers</h2>
-                <div class="product-price">$65.99</div>
-                <p class="product-description">Comfortable brown sneakers perfect for everyday wear. Features cushioned insoles and breathable material for all-day comfort.</p>
-                <button class="btn" onclick="addToCart(3)">Add to Cart</button>
-                <button class="btn btn-secondary" onclick="navigate('home')">Back to Products</button>
-            </div>
+          <div class="product-card">
+            <div class="product-image">📚</div>
+            <div class="product-title">Notebook Set</div>
+            <div class="product-price">$24.99</div>
+            <div class="product-description">Premium quality notebooks</div>
+            <button class="btn" onclick="navigate('product-4')">
+              View Details
+            </button>
+            <button class="btn btn-secondary" onclick="addToCart(4)">
+              Add to Cart
+            </button>
+          </div>
         </div>
+      </div>
 
-        <div id="product-4" class="page">
-            <div class="product-detail">
-                <div class="product-image">📚</div>
-                <h2 class="product-title">Notebook Set</h2>
-                <div class="product-price">$24.99</div>
-                <p class="product-description">Premium notebook set with 3 different sizes. Perfect for notes, sketches, or journaling. Features thick, high-quality paper.</p>
-                <button class="btn" onclick="addToCart(4)">Add to Cart</button>
-                <button class="btn btn-secondary" onclick="navigate('home')">Back to Products</button>
-            </div>
+      <!-- Product Detail Pages -->
+      <div id="product-1" class="page">
+        <div class="product-detail">
+          <div class="product-image">☕</div>
+          <h2 class="product-title">Classic Coffee Mug</h2>
+          <div class="product-price">$12.99</div>
+          <p class="product-description">
+            This classic coffee mug is perfect for your morning routine. Made
+            with high-quality ceramic, it keeps your coffee warm and looks great
+            on any desk.
+          </p>
+          <button class="btn" onclick="addToCart(1)">Add to Cart</button>
+          <button class="btn btn-secondary" onclick="navigate('home')">
+            Back to Products
+          </button>
         </div>
+      </div>
 
-        <!-- Cart Page -->
-        <div id="cart" class="page">
-            <div class="cart-container">
-                <h2 style="color: #5C3317; margin-bottom: 30px;">Shopping Cart</h2>
-                <div id="cartItems">
-                    <div class="cart-empty">
-                        <div class="cart-empty-icon">🛒</div>
-                        <h3 style="color: #5C3317; margin-bottom: 10px;">Your cart is empty</h3>
-                        <p style="color: #666;">Add some products to get started!</p>
-                        <button class="btn" style="max-width: 300px; margin: 20px auto;" onclick="navigate('home')">Continue Shopping</button>
-                    </div>
-                </div>
-                <div id="cartSummary" style="display: none;">
-                    <div class="cart-summary">
-                        <h3>Order Summary</h3>
-                        <div class="summary-row">
-                            <span>Subtotal:</span>
-                            <span id="subtotal">$0.00</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Tax (10%):</span>
-                            <span id="tax">$0.00</span>
-                        </div>
-                        <div class="summary-row total">
-                            <span>Total:</span>
-                            <span id="total">$0.00</span>
-                        </div>
-                        <button class="btn" style="margin-top: 20px;" onclick="alert('Checkout functionality coming soon!')">Proceed to Checkout</button>
-                        <button class="btn btn-secondary" onclick="navigate('home')">Continue Shopping</button>
-                    </div>
-                </div>
-            </div>
+      <div id="product-2" class="page">
+        <div class="product-detail">
+          <div class="product-image">🎒</div>
+          <h2 class="product-title">Leather Backpack</h2>
+          <div class="product-price">$89.99</div>
+          <p class="product-description">
+            A premium leather backpack with multiple compartments. Perfect for
+            work, school, or travel. Built to last with genuine leather and
+            brass hardware.
+          </p>
+          <button class="btn" onclick="addToCart(2)">Add to Cart</button>
+          <button class="btn btn-secondary" onclick="navigate('home')">
+            Back to Products
+          </button>
         </div>
+      </div>
 
-        <!-- Contact Page -->
-        <div id="contact" class="page">
-            <div class="form-container">
-                <h2 style="color: #5C3317; margin-bottom: 20px;">Contact Us</h2>
-                <p style="color: #666; margin-bottom: 30px;">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-                <div class="form-group">
-                    <label for="contact-name">Name</label>
-                    <input type="text" id="contact-name" placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-email">Email</label>
-                    <input type="email" id="contact-email" placeholder="your.email@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-subject">Subject</label>
-                    <input type="text" id="contact-subject" placeholder="What's this about?" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" placeholder="Your message here..." required></textarea>
-                </div>
-                <button class="btn" onclick="submitContactForm()">Send Message</button>
-                <button class="btn btn-secondary" onclick="navigate('home')">Back to Home</button>
-            </div>
+      <div id="product-3" class="page">
+        <div class="product-detail">
+          <div class="product-image">👟</div>
+          <h2 class="product-title">Brown Sneakers</h2>
+          <div class="product-price">$65.99</div>
+          <p class="product-description">
+            Comfortable brown sneakers perfect for everyday wear. Features
+            cushioned insoles and breathable material for all-day comfort.
+          </p>
+          <button class="btn" onclick="addToCart(3)">Add to Cart</button>
+          <button class="btn btn-secondary" onclick="navigate('home')">
+            Back to Products
+          </button>
         </div>
+      </div>
 
-        <!-- Submit Form Page -->
-        <div id="submit" class="page">
-            <div class="form-container">
-                <h2 style="color: #5C3317; margin-bottom: 20px;">Submit Your Information</h2>
-                <p style="color: #666; margin-bottom: 30px;">Please fill out the form below to submit your information.</p>
-                <div class="form-group">
-                    <label for="submit-name">Full Name</label>
-                    <input type="text" id="submit-name" placeholder="John Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="submit-email">Email Address</label>
-                    <input type="email" id="submit-email" placeholder="john@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="submit-phone">Phone Number</label>
-                    <input type="tel" id="submit-phone" placeholder="(123) 456-7890" required>
-                </div>
-                <div class="form-group">
-                    <label for="submit-category">Category</label>
-                    <select id="submit-category" required>
-                        <option value="">Select a category</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="product">Product Question</option>
-                        <option value="order">Order Support</option>
-                        <option value="feedback">Feedback</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="submit-comments">Additional Comments</label>
-                    <textarea id="submit-comments" placeholder="Tell us more..."></textarea>
-                </div>
-                <button class="btn" onclick="submitGeneralForm()">Submit</button>
-                <button class="btn btn-secondary" onclick="navigate('home')">Back to Home</button>
-            </div>
+      <div id="product-4" class="page">
+        <div class="product-detail">
+          <div class="product-image">📚</div>
+          <h2 class="product-title">Notebook Set</h2>
+          <div class="product-price">$24.99</div>
+          <p class="product-description">
+            Premium notebook set with 3 different sizes. Perfect for notes,
+            sketches, or journaling. Features thick, high-quality paper.
+          </p>
+          <button class="btn" onclick="addToCart(4)">Add to Cart</button>
+          <button class="btn btn-secondary" onclick="navigate('home')">
+            Back to Products
+          </button>
         </div>
+      </div>
 
-        <!-- Thank You Page -->
-        <div id="thankyou" class="page">
-            <div class="thank-you-content">
-                <div class="checkmark">✓</div>
-                <h2>Thank You!</h2>
-                <p>Your submission has been received successfully. We appreciate you reaching out to us and will get back to you as soon as possible.</p>
-                <p style="color: #8B4513; font-weight: bold;">Check your email for a confirmation message.</p>
-                <button class="btn" onclick="navigate('home')" style="max-width: 300px; margin: 0 auto;">Return to Home</button>
+      <!-- Cart Page -->
+      <div id="cart" class="page">
+        <div class="cart-container">
+          <h2 style="color: #5c3317; margin-bottom: 30px">Shopping Cart</h2>
+          <div id="cartItems">
+            <div class="cart-empty">
+              <div class="cart-empty-icon">🛒</div>
+              <h3 style="color: #5c3317; margin-bottom: 10px">
+                Your cart is empty
+              </h3>
+              <p style="color: #666">Add some products to get started!</p>
+              <button
+                class="btn"
+                style="max-width: 300px; margin: 20px auto"
+                onclick="navigate('home')"
+              >
+                Continue Shopping
+              </button>
             </div>
+          </div>
+          <div id="cartSummary" style="display: none">
+            <div class="cart-summary">
+              <h3>Order Summary</h3>
+              <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Tax (10%):</span>
+                <span id="tax">$0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total:</span>
+                <span id="total">$0.00</span>
+              </div>
+              <button
+                class="btn"
+                style="margin-top: 20px"
+                onclick="alert('Checkout functionality coming soon!')"
+              >
+                Proceed to Checkout
+              </button>
+              <button class="btn btn-secondary" onclick="navigate('home')">
+                Continue Shopping
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Contact Page -->
+      <div id="contact" class="page">
+        <div class="form-container">
+          <h2 style="color: #5c3317; margin-bottom: 20px">Contact Us</h2>
+          <p style="color: #666; margin-bottom: 30px">
+            Have questions? We'd love to hear from you. Send us a message and
+            we'll respond as soon as possible.
+          </p>
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input
+              type="text"
+              id="contact-name"
+              placeholder="Your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input
+              type="email"
+              id="contact-email"
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input
+              type="text"
+              id="contact-subject"
+              placeholder="What's this about?"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea
+              id="contact-message"
+              placeholder="Your message here..."
+              required
+            ></textarea>
+          </div>
+          <button class="btn" onclick="submitContactForm()">
+            Send Message
+          </button>
+          <button class="btn btn-secondary" onclick="navigate('home')">
+            Back to Home
+          </button>
+        </div>
+      </div>
+
+      <!-- Submit Form Page -->
+      <div id="submit" class="page">
+        <div class="form-container">
+          <h2 style="color: #5c3317; margin-bottom: 20px">
+            Submit Your Information
+          </h2>
+          <p style="color: #666; margin-bottom: 30px">
+            Please fill out the form below to submit your information.
+          </p>
+          <div class="form-group">
+            <label for="submit-name">Full Name</label>
+            <input
+              type="text"
+              id="submit-name"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="submit-email">Email Address</label>
+            <input
+              type="email"
+              id="submit-email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="submit-phone">Phone Number</label>
+            <input
+              type="tel"
+              id="submit-phone"
+              placeholder="(123) 456-7890"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="submit-category">Category</label>
+            <select id="submit-category" required>
+              <option value="">Select a category</option>
+              <option value="general">General Inquiry</option>
+              <option value="product">Product Question</option>
+              <option value="order">Order Support</option>
+              <option value="feedback">Feedback</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="submit-comments">Additional Comments</label>
+            <textarea
+              id="submit-comments"
+              placeholder="Tell us more..."
+            ></textarea>
+          </div>
+          <button class="btn" onclick="submitGeneralForm()">Submit</button>
+          <button class="btn btn-secondary" onclick="navigate('home')">
+            Back to Home
+          </button>
+        </div>
+      </div>
+
+      <!-- Simple Contact Form Page (NEW) -->
+      <div id="simpleform" class="page">
+        <div class="form-container">
+          <h2 style="color: #5c3317; margin-bottom: 20px">Quick Contact</h2>
+          <p style="color: #666; margin-bottom: 30px">
+            Send us a quick message with just your name and email.
+          </p>
+          <form id="simpleContactForm">
+            <div class="form-group">
+              <label for="simple-name">Name</label>
+              <input
+                type="text"
+                id="simple-name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="simple-email">Email</label>
+              <input
+                type="email"
+                id="simple-email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <button type="submit" class="btn">Submit</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="navigate('home')"
+            >
+              Back to Home
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Thank You Page -->
+      <div id="thankyou" class="page">
+        <div class="thank-you-content">
+          <div class="checkmark">✓</div>
+          <h2>Thank You!</h2>
+          <p>
+            Your submission has been received successfully. We appreciate you
+            reaching out to us and will get back to you as soon as possible.
+          </p>
+          <p style="color: #8b4513; font-weight: bold">
+            Check your email for a confirmation message.
+          </p>
+          <button
+            class="btn"
+            onclick="navigate('home')"
+            style="max-width: 300px; margin: 0 auto"
+          >
+            Return to Home
+          </button>
+        </div>
+      </div>
     </div>
 
     <script>
-        // Product data
-        const products = {
-            1: { name: 'Classic Coffee Mug', price: 12.99, icon: '☕' },
-            2: { name: 'Leather Backpack', price: 89.99, icon: '🎒' },
-            3: { name: 'Brown Sneakers', price: 65.99, icon: '👟' },
-            4: { name: 'Notebook Set', price: 24.99, icon: '📚' }
-        };
+      // Product data
+      const products = {
+        1: { name: "Classic Coffee Mug", price: 12.99, icon: "☕" },
+        2: { name: "Leather Backpack", price: 89.99, icon: "🎒" },
+        3: { name: "Brown Sneakers", price: 65.99, icon: "👟" },
+        4: { name: "Notebook Set", price: 24.99, icon: "📚" },
+      };
 
-        // Cart state
-        let cart = {};
+      // Cart state
+      let cart = {};
 
-        // Navigation
-        function navigate(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
+      // Navigation
+      function navigate(pageId) {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach((page) => page.classList.remove("active"));
 
-            const selectedPage = document.getElementById(pageId);
-            if (selectedPage) {
-                selectedPage.classList.add('active');
-                window.location.hash = pageId;
-                window.scrollTo(0, 0);
-            }
-
-            if (pageId === 'cart') {
-                renderCart();
-            }
+        const selectedPage = document.getElementById(pageId);
+        if (selectedPage) {
+          selectedPage.classList.add("active");
+          window.location.hash = pageId;
+          window.scrollTo(0, 0);
         }
 
-        // Add to cart
-        function addToCart(productId) {
-            if (cart[productId]) {
-                cart[productId]++;
-            } else {
-                cart[productId] = 1;
-            }
-            updateCartBadge();
-            showNotification('Added to cart!');
+        if (pageId === "cart") {
+          renderCart();
         }
+      }
 
-        // Update quantity
-        function updateQuantity(productId, delta) {
-            cart[productId] += delta;
-            if (cart[productId] <= 0) {
-                delete cart[productId];
-            }
-            updateCartBadge();
-            renderCart();
+      // Add to cart
+      function addToCart(productId) {
+        if (cart[productId]) {
+          cart[productId]++;
+        } else {
+          cart[productId] = 1;
         }
+        updateCartBadge();
+        showNotification("Added to cart!");
+      }
 
-        // Remove from cart
-        function removeFromCart(productId) {
-            delete cart[productId];
-            updateCartBadge();
-            renderCart();
+      // Update quantity
+      function updateQuantity(productId, delta) {
+        cart[productId] += delta;
+        if (cart[productId] <= 0) {
+          delete cart[productId];
         }
+        updateCartBadge();
+        renderCart();
+      }
 
-        // Update cart badge
-        function updateCartBadge() {
-            const badge = document.getElementById('cartBadge');
-            const totalItems = Object.values(cart).reduce((sum, qty) => sum + qty, 0);
-            
-            if (totalItems > 0) {
-                badge.textContent = totalItems;
-                badge.style.display = 'flex';
-            } else {
-                badge.style.display = 'none';
-            }
+      // Remove from cart
+      function removeFromCart(productId) {
+        delete cart[productId];
+        updateCartBadge();
+        renderCart();
+      }
+
+      // Update cart badge
+      function updateCartBadge() {
+        const badge = document.getElementById("cartBadge");
+        const totalItems = Object.values(cart).reduce(
+          (sum, qty) => sum + qty,
+          0
+        );
+
+        if (totalItems > 0) {
+          badge.textContent = totalItems;
+          badge.style.display = "flex";
+        } else {
+          badge.style.display = "none";
         }
+      }
 
-        // Render cart
-        function renderCart() {
-            const cartItemsDiv = document.getElementById('cartItems');
-            const cartSummary = document.getElementById('cartSummary');
-            
-            if (Object.keys(cart).length === 0) {
-                cartItemsDiv.innerHTML = `
+      // Render cart
+      function renderCart() {
+        const cartItemsDiv = document.getElementById("cartItems");
+        const cartSummary = document.getElementById("cartSummary");
+
+        if (Object.keys(cart).length === 0) {
+          cartItemsDiv.innerHTML = `
                     <div class="cart-empty">
                         <div class="cart-empty-icon">🛒</div>
                         <h3 style="color: #5C3317; margin-bottom: 10px;">Your cart is empty</h3>
@@ -750,24 +948,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <button class="btn" style="max-width: 300px; margin: 20px auto;" onclick="navigate('home')">Continue Shopping</button>
                     </div>
                 `;
-                cartSummary.style.display = 'none';
-                return;
-            }
+          cartSummary.style.display = "none";
+          return;
+        }
 
-            let html = '';
-            let subtotal = 0;
+        let html = "";
+        let subtotal = 0;
 
-            for (const [productId, quantity] of Object.entries(cart)) {
-                const product = products[productId];
-                const itemTotal = product.price * quantity;
-                subtotal += itemTotal;
+        for (const [productId, quantity] of Object.entries(cart)) {
+          const product = products[productId];
+          const itemTotal = product.price * quantity;
+          subtotal += itemTotal;
 
-                html += `
+          html += `
                     <div class="cart-item">
                         <div class="cart-item-image">${product.icon}</div>
                         <div class="cart-item-details">
                             <div class="cart-item-title">${product.name}</div>
-                            <div class="cart-item-price">$${product.price.toFixed(2)} each</div>
+                            <div class="cart-item-price">$${product.price.toFixed(
+                              2
+                            )} each</div>
                         </div>
                         <div class="cart-item-actions">
                             <div class="quantity-control">
@@ -779,98 +979,135 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 `;
-            }
-
-            cartItemsDiv.innerHTML = html;
-
-            const tax = subtotal * 0.1;
-            const total = subtotal + tax;
-
-            document.getElementById('subtotal').textContent = '$' + subtotal.toFixed(2);
-            document.getElementById('tax').textContent = '$' + tax.toFixed(2);
-            document.getElementById('total').textContent = '$' + total.toFixed(2);
-
-            cartSummary.style.display = 'block';
         }
 
-        // Show notification
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: #8B4513;
-                color: white;
-                padding: 15px 25px;
-                border-radius: 5px;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-                z-index: 1000;
-                animation: slideIn 0.3s ease-out;
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease-out';
-                setTimeout(() => notification.remove(), 300);
-            }, 2000);
+        cartItemsDiv.innerHTML = html;
+
+        const tax = subtotal * 0.1;
+        const total = subtotal + tax;
+
+        document.getElementById("subtotal").textContent =
+          "$" + subtotal.toFixed(2);
+        document.getElementById("tax").textContent = "$" + tax.toFixed(2);
+        document.getElementById("total").textContent = "$" + total.toFixed(2);
+
+        cartSummary.style.display = "block";
+      }
+
+      // Show notification
+      function showNotification(message) {
+        const notification = document.createElement("div");
+        notification.textContent = message;
+        notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: rgba(0,0,0,0.85);
+                    color: #fff;
+                    padding: 10px 14px;
+                    border-radius: 6px;
+                    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+                    z-index: 10000;
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: opacity 300ms ease, transform 300ms ease;
+                `;
+
+        document.body.appendChild(notification);
+
+        // auto-hide
+        setTimeout(() => {
+          notification.style.opacity = "0";
+          notification.style.transform = "translateY(-8px)";
+        }, 1500);
+
+        setTimeout(() => {
+          if (notification.parentNode)
+            notification.parentNode.removeChild(notification);
+        }, 1900);
+      }
+
+      // Contact form submit handlers
+      function submitContactForm() {
+        const name = document.getElementById("contact-name").value.trim();
+        const email = document.getElementById("contact-email").value.trim();
+        const subject = document.getElementById("contact-subject").value.trim();
+        const message = document.getElementById("contact-message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+          showNotification("Please fill out all contact fields.");
+          return;
         }
 
-        // Form submissions
-        function submitContactForm() {
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const subject = document.getElementById('contact-subject').value;
-            const message = document.getElementById('contact-message').value;
+        // Simulate successful submit (replace with real API call if available)
+        showNotification("Message sent — thank you!");
+        document.getElementById("contact-name").value = "";
+        document.getElementById("contact-email").value = "";
+        document.getElementById("contact-subject").value = "";
+        document.getElementById("contact-message").value = "";
+        navigate("thankyou");
+      }
 
-            if (name && email && subject && message) {
-                console.log('Contact form submitted:', { name, email, subject, message });
-                
-                document.getElementById('contact-name').value = '';
-                document.getElementById('contact-email').value = '';
-                document.getElementById('contact-subject').value = '';
-                document.getElementById('contact-message').value = '';
-                
-                navigate('thankyou');
-            } else {
-                alert('Please fill out all fields');
-            }
+      function submitGeneralForm() {
+        const name = document.getElementById("submit-name").value.trim();
+        const email = document.getElementById("submit-email").value.trim();
+        const phone = document.getElementById("submit-phone").value.trim();
+        const category = document.getElementById("submit-category").value;
+        const comments = document
+          .getElementById("submit-comments")
+          .value.trim();
+
+        if (!name || !email || !phone || !category) {
+          showNotification("Please complete the required fields.");
+          return;
         }
 
-        function submitGeneralForm() {
-            const name = document.getElementById('submit-name').value;
-            const email = document.getElementById('submit-email').value;
-            const phone = document.getElementById('submit-phone').value;
-            const category = document.getElementById('submit-category').value;
-            const comments = document.getElementById('submit-comments').value;
+        // Simulate submission
+        showNotification("Information submitted. Thank you!");
+        document.getElementById("submit-name").value = "";
+        document.getElementById("submit-email").value = "";
+        document.getElementById("submit-phone").value = "";
+        document.getElementById("submit-category").value = "";
+        document.getElementById("submit-comments").value = "";
+        navigate("thankyou");
+      }
 
-            if (name && email && phone && category) {
-                console.log('General form submitted:', { name, email, phone, category, comments });
-                
-                document.getElementById('submit-name').value = '';
-                document.getElementById('submit-email').value = '';
-                document.getElementById('submit-phone').value = '';
-                document.getElementById('submit-category').value = '';
-                document.getElementById('submit-comments').value = '';
-                
-                navigate('thankyou');
-            } else {
-                alert('Please fill out all required fields');
-            }
-        }
+      // Simple contact form handler
+      const simpleForm = document.getElementById("simpleContactForm");
+      if (simpleForm) {
+        simpleForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("simple-name").value.trim();
+          const email = document.getElementById("simple-email").value.trim();
 
-        // Handle browser navigation
-        window.addEventListener('hashchange', function() {
-            const hash = window.location.hash.substring(1) || 'home';
-            navigate(hash);
+          if (!name || !email) {
+            showNotification("Please enter your name and email.");
+            return;
+          }
+
+          showNotification("Thanks! We received your quick message.");
+          document.getElementById("simple-name").value = "";
+          document.getElementById("simple-email").value = "";
+          navigate("thankyou");
         });
+      }
 
-        window.addEventListener('load', function() {
-            const hash = window.location.hash.substring(1) || 'home';
+      // Initialize on page load
+      window.addEventListener("DOMContentLoaded", () => {
+        updateCartBadge();
+        const hash = window.location.hash.replace("#", "");
+        if (hash) {
+          // If hash matches an existing page id, navigate there; otherwise default to home
+          const target = document.getElementById(hash);
+          if (target && target.classList.contains("page")) {
             navigate(hash);
-        });
+          } else {
+            navigate("home");
+          }
+        } else {
+          navigate("home");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
