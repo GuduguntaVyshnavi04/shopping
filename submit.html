@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0J6P3W2F2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M0J6P3W2F2');
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5NW5BZZ7');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f4f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #5C3317;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: #5C3317;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background-color: #999;
+        }
+    </style>
+
+    <script>
+        function submitGeneralForm(event) {
+            event.preventDefault(); // stop refresh
+
+            const data = {
+                name: document.getElementById("submit-name").value,
+                email: document.getElementById("submit-email").value,
+                phone: document.getElementById("submit-phone").value,
+                category: document.getElementById("submit-category").value,
+                comments: document.getElementById("submit-comments").value
+            };
+
+            console.log("Form Submitted:", data);
+            alert("Your information has been submitted successfully!");
+        }
+
+        function navigate(page) {
+            alert("Navigate to: " + page); 
+        }
+    </script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NW5BZZ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Submit Form Page -->
+    <div id="submit" class="page">
+        <div class="form-container">
+            <h2>Submit Your Information</h2>
+            <p class="subtitle">Please fill out the form below to submit your information.</p>
+
+            <form id="general-form" onsubmit="submitGeneralForm(event)">
+                
+                <div class="form-group">
+                    <label for="submit-name">Full Name</label>
+                    <input type="text" id="submit-name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="submit-email">Email Address</label>
+                    <input type="email" id="submit-email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="submit-phone">Phone Number</label>
+                    <input type="tel" id="submit-phone" placeholder="(123) 456-7890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="submit-category">Category</label>
+                    <select id="submit-category" required>
+                        <option value="">Select a category</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="product">Product Question</option>
+                        <option value="order">Order Support</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="submit-comments">Additional Comments</label>
+                    <textarea id="submit-comments" placeholder="Tell us more..."></textarea>
+                </div>
+
+                <button class="btn" type="submit">Submit</button>
+                <button class="btn btn-secondary" type="button" onclick="navigate('home')">Back to Home</button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
